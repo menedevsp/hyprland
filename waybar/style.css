@@ -1,0 +1,316 @@
+@define-color modules_background rgba(40, 40, 40, 0.96);
+@define-color border_color #993399;
+
+@define-color workspaces_button_off #928374;
+@define-color workspaces_button_on #fbf1c7;
+
+@define-color spotify_idle #b8bb26;
+@define-color spotify_hover #98971a;
+
+@define-color tray_menu #1D2021;
+@define-color tray_menu_border #3c3836;
+@define-color tray_menu_item #ebdbb2;
+@define-color tray_menu_item_hover #ebdbb2;
+@define-color tray_menu_item_hover_background #504945;
+
+@define-color clock_idle #ebdbb2;
+@define-color clock_hover #a89984;
+
+@define-color weather_idle #83a598;
+@define-color weather_hover #458588;
+
+@define-color brightness_idle #fe8019;
+@define-color brightness_hover #d65d0e;
+
+@define-color sound_idle #fabd2f;
+@define-color sound_hover #d79921;
+
+@define-color cpu_idle #8ec07c;
+@define-color cpu_hover #689d6a;
+
+@define-color memory_idle #83a598;
+@define-color memory_hover #458588;
+
+@define-color bluetooth_idle #458488;
+@define-color bluetooth_hover #83a598;
+
+@define-color network_idle #458488;
+@define-color network_hover #83a598;
+
+@define-color power_idle #fb4934;
+@define-color power_hover #cc241d;
+
+@define-color tooltip_background #282828;
+@define-color tooltip_text #ebdbb2;
+
+* {
+  font-family: "Monaspace Neon", "JetBrainsMono Nerd Font";
+  font-weight: 600;
+  font-size: 12.3px;
+}
+
+#waybar {
+  /*background-color: transparent;*/
+  background-color: @modules_background;
+  border: 1px solid @border_color;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+#group-left, #group-center, #group-right {
+    /* background-color: @modules_background;
+    border: 1px solid @border_color;
+    border-radius: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px; */
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+
+#workspaces {
+  margin-left: 6px;
+  margin-right: 16px;
+}
+
+#workspaces button {
+  color: @workspaces_button_off;
+
+  margin: 0px;
+  padding: 0px;
+
+  transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+  color: @workspaces_button_on;
+
+  transition: all 0.3s ease;
+}
+
+#workspaces button:hover {
+  background: none;
+
+  color: @workspaces_button_on;
+
+  box-shadow: none;
+  text-shadow: none;
+  transition: none;
+  border-color: transparent;
+
+  transition: all 0.3s ease;
+}
+
+
+
+#custom-spotify {
+  color: @spotify_idle;
+
+  margin-right: 16px;
+
+  transition: all 0.3s ease;
+}
+
+#custom-spotify:hover {
+  color: @spotify_hover;
+
+  transition: all 0.3s ease;
+}
+
+#tray menu {
+  background-color: @tray_menu;
+  border: 2px solid @tray_menu_border;
+}
+
+#tray menu menuitem {
+  color: @tray_menu_item;
+}
+
+#tray menu menuitem:hover {
+  color: @tray_menu_item_hover;
+  background-color: @tray_menu_item_hover_background;
+}
+
+
+
+#clock {
+  color: @clock_idle;
+
+  margin-right: 16px;
+
+  transition: all 0.3s ease;
+}
+
+#clock:hover {
+  color: @clock_hover;
+
+  transition: all 0.3s ease;
+}
+
+
+
+#custom-weather {
+  color: @weather_idle;
+
+  transition: all 0.3s ease;
+}
+
+#custom-weather:hover {
+  color: @weather_hover;
+
+  transition: all 0.3s ease;
+}
+
+
+
+#custom-wl-gammarelay-brightness {
+  color: @brightness_idle;
+
+  margin-right: 12px;
+
+  transition: all 0.3s ease;
+}
+
+#custom-wl-gammarelay-brightness:hover {
+  color: @brightness_hover;
+
+  transition: all 0.3s ease;
+}
+
+
+
+#custom-wireplumber {
+  color: @sound_idle;
+
+  margin-right: 8px;
+
+  transition: all 0.3s ease;
+}
+
+#custom-wireplumber:hover {
+  color: @sound_hover;
+
+  transition: all 0.3s ease;
+}
+
+#custom-microphone {
+  color: #d3869b; /* Ou a cor que preferir */
+  margin-right: 8px;
+  transition: all 0.3s ease;
+}
+
+#custom-microphone:hover {
+  color: #b16286; /* Cor para o hover */
+  transition: all 0.3s ease;
+}
+
+#cpu {
+  color: @cpu_idle;
+  margin-right: 8px;
+  transition: all 0.3s ease;
+}
+
+#cpu:hover {
+  color: @cpu_hover;
+  transition: all 0.3s ease;
+}
+
+#memory {
+  color: @memory_idle;
+  margin-right: 8px;
+  transition: all 0.3s ease;
+}
+
+#memory:hover {
+  color: @memory_hover;
+  transition: all 0.3s ease;
+}
+
+#group-end {
+  margin-right: 16px;
+}
+
+
+
+#bluetooth {
+  color: @bluetooth_idle;
+
+  margin-right: 8px;
+  font-size: 17px;
+
+  transition: all 0.3s ease;
+}
+
+#bluetooth.off {
+  transition: all 0.3s ease;
+}
+
+#bluetooth:hover {
+  color: @bluetooth_hover;
+
+  transition: all 0.3s ease;
+}
+
+
+
+#network {
+  color: @network_idle;
+
+  transition: all 0.3s ease;
+}
+
+#network:hover {
+  color: @network_hover;
+
+  transition: all 0.3s ease;
+}
+
+#battery.critical {
+    color: #fb4934;
+}
+
+
+#custom-power,
+#custom-lock,
+#custom-reboot {
+  color: @power_idle;
+
+  transition: all 0.3s ease;
+}
+
+#custom-power {
+  padding-right: 12px;
+}
+
+#custom-reboot {
+  padding-right: 12px;
+}
+
+#custom-lock {
+  padding-right: 12px;
+}
+
+#custom-power:hover,
+#custom-lock:hover,
+#custom-reboot:hover {
+  color: @power_hover;
+
+  transition: all 0.3s ease;
+}
+
+/*-----------------*/
+/*-----TOOLTIP-----*/
+/*-----------------*/
+
+tooltip {
+  background-color: @tooltip_background;
+}
+
+tooltip label {
+  color: @tooltip_text;
+}
